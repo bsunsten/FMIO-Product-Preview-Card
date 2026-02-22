@@ -1,0 +1,59 @@
+@use "./variables" as *;
+/*TEXT PRESETS*/
+@mixin text-preset-1 {
+  font-family: "Fraunces", serif;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-size: 2rem;
+}
+
+@mixin text-preset-2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  line-height: 110%;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  line-height: 160%;
+}
+
+@mixin text-preset-4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  line-height: 120%;
+}
+
+@mixin text-preset-5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0px;
+  line-height: 120%;
+  text-decoration: line-through;
+}
+
+/*Other Mixins*/
+@mixin flexCenter($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin btn {
+  @include text-preset-2;
+  @include flexCenter(row, 0.5rem);
+  align-items: center;
+  border: none;
+  color: $white;
+  background-color: $green-500;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+@use "./mixins" as *;
+
+.desktop-img {
+  display: none;
+}
+.content {
+  @include flexCenter(column, 2rem);
+  padding: 2rem;
+}
+
+/*DESKTOP STYLES*/
+@media (min-width: 42rem) {
+  article {
+    @include flexCenter(row, 0px);
+  }
+
+  .content {
+    flex: 1 1 50%;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+    min-width: 0;
+    width: auto !important;
+    height: auto !important;
+    flex: 1 1 50%;
+    object-fit: cover;
+  }
+}

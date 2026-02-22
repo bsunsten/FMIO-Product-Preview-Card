@@ -1,0 +1,76 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.product-card {
+  background: $white;
+  max-width: 37.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  img {
+    width: 100%;
+  }
+}
+
+/*CONTENT STYLING*/
+.tag {
+  @include text-preset-4;
+  color: $grey;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.product-name h1 {
+  @include text-preset-1;
+}
+
+.product-desc {
+  @include text-preset-3;
+  color: $grey;
+}
+
+/*PRICE SECTION*/
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.current-price {
+  @include text-preset-1;
+  color: $green-500;
+}
+
+.retail-price {
+  @include text-preset-5;
+  color: $grey;
+}
+
+/*BUTTON*/
+.cart-button {
+  @include btn;
+  img {
+    width: 18px;
+  }
+  transition: 0.3s;
+  &:hover {
+    background-color: $green-700;
+  }
+}
+
+/*FOOTER*/
+
+.attribution {
+  @include text-preset-3;
+  color: $white;
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: $green-500;
+  width: fit-content;
+  justify-self: center;
+}
+.attribution a {
+  color: $white;
+}
