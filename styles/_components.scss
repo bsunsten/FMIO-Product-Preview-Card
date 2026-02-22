@@ -52,13 +52,14 @@
   img {
     width: 18px;
   }
+  transition-property: background-color;
   transition: 0.3s;
   &:hover {
     background-color: $green-700;
   }
 
-  &:focus {
-    background-color: $white;
+  &:focus-visible {
+    background-color: $green-700;
   }
 }
 

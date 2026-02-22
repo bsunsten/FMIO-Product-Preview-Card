@@ -147,13 +147,14 @@ body {
   width: 18px;
 }
 .cart-button {
+  transition-property: background-color;
   transition: 0.3s;
 }
 .cart-button:hover {
   background-color: hsl(158, 42%, 18%);
 }
-.cart-button:focus {
-  background-color: hsl(0, 0%, 100%);
+.cart-button:focus-visible {
+  background-color: hsl(158, 42%, 18%);
 }
 
 /*FOOTER*/
