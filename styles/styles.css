@@ -17,7 +17,6 @@ body {
   min-height: 100vh;
   background: hsl(30, 38%, 92%);
   display: grid;
-  text-decoration: none;
   justify-content: center;
   grid-template-rows: 1fr auto;
   align-items: center;
@@ -55,8 +54,8 @@ body {
   .desktop-img {
     display: block;
     min-width: 0;
-    width: auto !important;
-    height: auto !important;
+    width: auto;
+    height: auto;
     flex: 1 1 50%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -84,7 +83,7 @@ body {
   font-weight: 500;
 }
 
-.product-name h1 {
+.product-name {
   font-family: "Fraunces", serif;
   font-weight: bold;
   line-height: 100%;
@@ -152,6 +151,9 @@ body {
 }
 .cart-button:hover {
   background-color: hsl(158, 42%, 18%);
+}
+.cart-button:focus {
+  background-color: hsl(0, 0%, 100%);
 }
 
 /*FOOTER*/

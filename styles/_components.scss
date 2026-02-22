@@ -20,7 +20,7 @@
   font-weight: 500;
 }
 
-.product-name h1 {
+.product-name {
   @include text-preset-1;
 }
 
@@ -55,6 +55,10 @@
   transition: 0.3s;
   &:hover {
     background-color: $green-700;
+  }
+
+  &:focus {
+    background-color: $white;
   }
 }
 
