@@ -1,0 +1,127 @@
+@import "./variables";
+
+@mixin flexCenter($direction, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  gap: $gap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: $cream;
+  display: grid;
+  text-decoration: none;
+  justify-content: center;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.product-card {
+  background: $white;
+  max-width: 37.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-inline: 1rem;
+  img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 32rem) {
+  article {
+    @include flexCenter(row, 0px);
+  }
+
+  .content {
+    flex: 1 1 50%;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+    min-width: 0;
+    width: auto !important;
+    height: auto !important;
+    flex: 1 1 50%;
+    object-fit: cover;
+  }
+}
+
+.content {
+  @include flexCenter(column, 2rem);
+  padding: 2rem;
+}
+
+.tag {
+  @include text-preset-4;
+  color: $grey;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.product-name {
+  @include text-preset-1;
+}
+
+.product-desc {
+  @include text-preset-3;
+  color: $grey;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.current-price {
+  @include text-preset-1;
+  color: $green-500;
+}
+
+.retail-price {
+  @include text-preset-5;
+  color: $grey;
+}
+
+.cart-button {
+  @include btn;
+  img {
+    width: 18px;
+  }
+  transition: 0.3s;
+  &:hover {
+    background-color: $green-700;
+  }
+}
+
+.attribution {
+  @include text-preset-3;
+  color: $white;
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: $green-500;
+  width: fit-content;
+  justify-self: center;
+}
+.attribution a {
+  color: $white;
+}
